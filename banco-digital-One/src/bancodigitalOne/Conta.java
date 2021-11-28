@@ -4,7 +4,7 @@ public abstract  class Conta  implements iConta {
 	
 	// atributos
 	
-    private static final int AGENCIA_PADRAO = 1;
+    private static final int  AGENCIA_PADRAO =  1;
 	
 	protected int agencia;
 	protected  int numero;
@@ -46,6 +46,7 @@ public abstract  class Conta  implements iConta {
 	}
 
 	public double getCc_saldo() {
+		
 		return saldo;
 	}
 
@@ -53,20 +54,31 @@ public abstract  class Conta  implements iConta {
 	
 	@Override
 	public void sacar(double valor) {
-		// TODO Auto-generated method stub
+		saldo -=  valor; 
 		
 	}
 
 	@Override
 	public void depositar(double valor) {
-		// TODO Auto-generated method stub
+		saldo +=  valor; 
 		
 	}
 
 	@Override
 	public void transferir(double valor, Conta contaDestino) {
-		// TODO Auto-generated method stub
 		
+		// usando poo e aproveitando metodos 
+		// sacar da conta que esta transferindo
+		this.sacar(valor);		
+		// depositar na conta destino
+		contaDestino.depositar(valor);
+		
+	}
+	
+	protected void imprimirDadosConta() {
+		System.out.println(String.format("Agencia %d", this.agencia)) ;
+		System.out.println(String.format("Conta %d", this.numero)) ;
+		System.out.println(String.format("Saldo %.2f", this.saldo)) ;
 	}
 
 	
