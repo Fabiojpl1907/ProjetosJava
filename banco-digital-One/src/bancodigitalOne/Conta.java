@@ -4,19 +4,22 @@ public abstract  class Conta  implements iConta {
 	
 	// atributos
 	
-    private static final int  AGENCIA_PADRAO =  1;
+    private static final String  AGENCIA_PADRAO =  "0001";
 	
-	protected int agencia;
+    // toda conta tem 
+    protected String  agencia;	
 	protected  int numero;
 	protected  double saldo; 
+	protected Cliente  cliente;	
 	
 	//Construtor
 	// valor sequencial  controlada pela propria classe
 	private static int SEQUENCIAL = 1;
 
-	public Conta() {
+	public Conta(Cliente cliente) {
 		this.agencia = Conta.AGENCIA_PADRAO ;  
 		this.numero = SEQUENCIAL++;
+		this.cliente = cliente;
 	}
 
 	
@@ -35,9 +38,9 @@ public abstract  class Conta  implements iConta {
 
 	
 	
-	// geters 
+// geters 
 	
-	public int getCc_agencia() {
+	public String getCc_agencia() {
 		return agencia;
 	}
 
@@ -50,7 +53,7 @@ public abstract  class Conta  implements iConta {
 		return saldo;
 	}
 
-	// mplementado a clase abstrata iConta 
+	// Implementado a classe abstrata iConta 
 	
 	@Override
 	public void sacar(double valor) {
@@ -65,7 +68,7 @@ public abstract  class Conta  implements iConta {
 	}
 
 	@Override
-	public void transferir(double valor, Conta contaDestino) {
+	public void transferir(double valor, iConta contaDestino) {
 		
 		// usando poo e aproveitando metodos 
 		// sacar da conta que esta transferindo
@@ -75,16 +78,18 @@ public abstract  class Conta  implements iConta {
 		
 	}
 	
-	protected void imprimirDadosConta() {
-		System.out.println(String.format("Agencia %d", this.agencia)) ;
-		System.out.println(String.format("Conta %d", this.numero)) ;
-		System.out.println(String.format("Saldo %.2f", this.saldo)) ;
+	protected void imprimirDadosConta( String tipo) {
+		
+		System.out.println(String.format("Titular : %s", this.cliente.getCli_nome())) ;
+		System.out.println("-------------------------------");
+		System.out.println( "--- Extrato Conta " + tipo +  " ---") ;
+		System.out.println("-------------------------------");
+		System.out.println("Agencia : " + this.agencia) ;
+		System.out.println(String.format("Conta   : %d", this.numero)) ;
+		System.out.println(String.format("Saldo   : %.2f", this.saldo)) ;
+		System.out.println("-------------------------------\n");
 	}
 
-	
-	
-	
-	
 	
 
 }

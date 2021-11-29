@@ -6,8 +6,8 @@ public interface iConta {
 	
 	void depositar( double valor ) ;
 
-	void transferir( double valor , Conta contaDestino);
+	void transferir( double valor , iConta contaDestino);
 	
-	void imprimirExtrato();
+	void imprimirExtrato(String tipo);
 
 }

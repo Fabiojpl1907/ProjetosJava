@@ -2,13 +2,15 @@ package bancodigitalOne;
 
 public class ContaPoupanca  extends Conta{
 	
-	@Override
-	public void  imprimirExtrato() {
-		
-		System.out.println( "--- Extrato Conta Poupança ---") ;
-		super.imprimirDadosConta();
-		
+	public ContaPoupanca( Cliente cliente) {
+		super(cliente);
+	}
 	
+	@Override
+	public void  imprimirExtrato(String tipo) {
+		
+		super.imprimirDadosConta(tipo);
+		
 }
 
 }
