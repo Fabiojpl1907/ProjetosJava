@@ -1,6 +1,5 @@
 package bancodigitalOne;
 
-import java.util.List;
 
 public class DigitalOne {
 	
@@ -17,6 +16,7 @@ public class DigitalOne {
 		// Criar cliente
 		Cliente cli = new Cliente();
         cli.setCli_nome("Fábio José")	;	
+        
 		
     	// criando conta Corrente 		
 		// quando chama o construtor conta ja gera agencia e numero 
@@ -35,6 +35,7 @@ public class DigitalOne {
 	    bc.nomeBanco();
 		cc.imprimirExtrato("Corrente");
 		cp.imprimirExtrato("Poupança");
+		
 		
 
 				

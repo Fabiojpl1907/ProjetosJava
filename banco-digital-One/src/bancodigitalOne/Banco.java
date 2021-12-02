@@ -1,16 +1,15 @@
 package bancodigitalOne;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Banco {
 	
 	private String ban_nome;
 	private int comprimento;
-	
-	
-//	public List<Conta> contas = new ArrayList<Conta>();
 	public List<Conta> contas;
+	
+   
 	
 	public String getBan_nome() {
 		return ban_nome;
