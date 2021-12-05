@@ -6,11 +6,18 @@ public class Desafio_5 {
 
         Scanner leitor = new Scanner(System.in);
 
+        // informar quantos numeros serão fornecidos
         int N = leitor.nextInt();
 
         for (int i = 0; i < N; i++) {
 
+            // fornecer o N numeros a sera analisados
             int X = leitor.nextInt();
+
+            // Modulo ou resto é a operação de mostrar o resto de uma divisao
+            // a divisão entre numeros pares nunca tem resto ( zero )
+            // toda divisão entre numeros impares tem resto
+            // em java o modulo é a divisão feito com o operador %
 
             if( X % 2 == 0 && X != 0){
                 if( X > 0 ) System.out.println("EVEN POSITIVE");

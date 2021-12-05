@@ -15,6 +15,7 @@ public class Desafio_4 {
 
         int ajuste = horasaida + tempoviagem + fuso;
 
+        // se der 24 ou mais horas estamos no novo dia
         if ( ajuste >=24 ) ajuste -= 24;
 
         System.out.println(ajuste);

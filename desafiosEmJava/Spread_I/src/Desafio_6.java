@@ -20,7 +20,8 @@ public class Desafio_6 {
             if(x1 == 0 && y1 == 0 && x2 == 0 && y2 == 0) break; //condição de parada
 
             if(  x1 == x2 && y1 == y2  ) System.out.println("0"); // mesma casa
-            else if( x1 == x2 || y1 == y2  ) System.out.println("1");  // 1 movimento na linha ou ando na coluna
+
+            else if( x1 == x2 || y1 == y2  ) System.out.println("1");  // Movimento na linha ou na coluna
 
              // o movento diagonal sera sempe propocional
             // a quantidade de linhas que andar , devo andar o mesmo numeros de casa

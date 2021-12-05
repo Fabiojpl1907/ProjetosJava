@@ -35,6 +35,10 @@ public class Desafio_1 {
 
         int L = sc.nextInt();
         int C = sc.nextInt();
+
+        // Nas casas brancas,  a soma de L e C é numero par
+        // Nas casas  pretas,  a soma de L e C é numero impar
+
         if (( L + C) % 2 == 0)
             System.out.println("1");
         else                                               //complete o código nos espaços em branco
