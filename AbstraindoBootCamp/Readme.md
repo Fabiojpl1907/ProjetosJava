@@ -16,7 +16,7 @@ Para preservar cada passo o projeto é armazenado em versões.
 
 `Versão 1 - Apresentação de Abstração e Encapsulamento`  
 
-`Versão 2 - Herança e Polimorfismo - fase I` 
+`Versão 2 - Herança e Polimorfismo` 
 
 
 
