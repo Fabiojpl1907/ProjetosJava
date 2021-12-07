@@ -10,9 +10,9 @@ Usando  os pilares da POO devidamente formalizados na abstração de um Bootcamp
 
 Criado em Intellij + Java 11 
 
-O projeto foi construido em camadas , onde cada camada é construida a partir de determinados conceitos, e a proxima camada amplia e melhora a camada anterior .
+O projeto foi construido em camadas,todas funcionais,  onde cada camada é construida para tratar determinados conceitos, e a proxima camada amplia e melhora a camada anterior, tornado o projeto cada vez mais aderente ao paradigma POO.
 
-Para preservar cada passo construido o projeto é armazenado tem 4 versões. 
+Para preservar cada passo o projeto é armazenado em versões. 
 
 `Versão 1 - Apresentação de Abstração e Encapsulamento`  
 
