@@ -13,22 +13,12 @@ public class Bootcamp {
 
     private String nome;
     private String descricao;
-    // como datas não podem ser alterads , são criadas como constantes
-    // considerar a data de inscrição a data atual
     private final LocalDate dataInicial = LocalDate.now();
-    // bootcamp termina 45 dias aposa inscrição
     private final LocalDate dataFinal = dataInicial.plusDays(45);
-
-    // criar gruoo de dev que esyão incritos em um bootcamp
-    // como cada pessao é unica e uma mesma pessoa nao pode aprecer 2 vezes
-    // no mesmo bootcamp o grupo sera criado por Set<>.
-    // como a ordem de DEv é irrelevante e vamos usar HashSet<> elementos não são ordenados
     private Set<Dev> devsInscritos = new HashSet<>();
 
     // criar grupo de conteudo do bootcamp
-    // como a ordem de inserção é importante ,
-    // é usado LinkedHashSet<>
-    private Set<Conteudo> conteudos = new LinkedHashSet<>()
+    private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
 // gerar Get e Set
 // para constantes os Set não são criados visto que não serao alterados
