@@ -1,13 +1,20 @@
 package bancodigitalOne;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Objects;
+import java.util.Set;
 
 public class Banco {
 	
 	private String ban_nome;
 	private int comprimento;
-	public List<Conta> contas;
+	// lista de contas do banco
+	// como cada conta deve ser unica no mesmo banco 
+	// foi utilizado  LinkedHashSet<>
+	private Set<iConta> contas = new LinkedHashSet<>();
+    
 	
    
 	
@@ -27,14 +34,37 @@ public class Banco {
 		
 	}
 
-	public List<Conta> getContas() {
+	public Set<Conta> getContas() {
 		return contas;
 	}
 
-	public void setContas(List<Conta> contas) {
+	public void setContas(Set<Conta> contas) {
 		this.contas = contas;
+	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(contas);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Banco other = (Banco) obj;
+		return Objects.equals(contas, other.contas);
 	}
 
 
+
+
+	
+	
+	
+	
+	
 }

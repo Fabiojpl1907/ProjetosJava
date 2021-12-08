@@ -23,12 +23,21 @@ public class DigitalOne {
 		
 		Conta cc = new ContaCorrente(cli);
 		cc.depositar(100);
+       
 	
+		// Adicionando conta no grupo de contas do banco
+		bc.getContas().add(cc);
+		System.out.println("____>>> Conteudos  : " + bc.getContas());
 		
 		// criando conta Poupança 
 		Conta cp = new ContaPoupanca(cli);
 		cc.transferir(47.15, cp);
+		bc.getContas().add(cp);
 
+		
+		System.out.println(   "-----------------------" );
+		System.out.println(   bc.getContas() );
+		System.out.println(   "-----------------------" );
 				
 	 // imprimir extrato conta
 	
